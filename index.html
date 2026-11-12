@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="An interactive field guide to algorithms. Understand the steps, watch them run, and build your own. No coding experience needed." name="description"/>
+  <title>
+   How Algorithms Work — An interactive field guide
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to lesson
+  </a>
+  <header class="site-header">
+   <a aria-label="Fieldnotes, return to the beginning" class="brand" href="index.html">
+    <svg aria-hidden="true" height="30" viewBox="0 0 32 32" width="30">
+     <path d="M4 6h9v8h15M13 14v12h15">
+     </path>
+     <circle cx="4" cy="6" r="2">
+     </circle>
+     <circle cx="28" cy="14" r="2">
+     </circle>
+     <circle cx="28" cy="26" r="2">
+     </circle>
+    </svg>
+    FIELDNOTES
+    <span>
+     / THE EVERYDAY SCIENCE SERIES
+    </span>
+   </a>
+   <span class="header-note">
+    No. 001   /   An interactive field guide
+   </span>
+  </header>
+  <div class="layout">
+   <aside>
+    <p class="course-label">
+     HOW ALGORITHMS WORK
+    </p>
+    <nav aria-label="Chapters" id="chapters">
+    </nav>
+    <div class="aside-note">
+     <span class="aside-rule">
+     </span>
+     <p>
+      A few simple ideas.
+      <br/>
+      A different way to see things.
+     </p>
+     <span class="micro">
+      READ · EXPERIMENT · UNDERSTAND
+     </span>
+    </div>
+   </aside>
+   <main id="main" tabindex="-1">
+    <div class="chapter-meta">
+     <span id="chapter-number">
+     </span>
+     <span id="progress-text">
+     </span>
+    </div>
+    <div aria-label="Journey progress" aria-valuemax="6" aria-valuemin="1" aria-valuenow="1" class="progress" role="progressbar">
+     <div id="progress-bar">
+     </div>
+    </div>
+    <section aria-labelledby="title-0" class="chapter" id="chapter-0">
+     <p class="eyebrow">
+      01 / START WITH SOMETHING FAMILIAR
+     </p>
+     <h1 id="title-0">
+      How algorithms
+      <br/>
+      work.
+     </h1>
+     <p class="intro">
+      Behind the complicated word is a simple idea:
+      <br class="desktop-break"/>
+      a clear way to get from a question to an answer.
+     </p>
+     <div class="recipe">
+      <div class="recipe-label">
+       <span class="micro">
+        AN EVERYDAY ALGORITHM
+       </span>
+       <h3>
+        Make a cup of tea.
+       </h3>
+      </div>
+      <div aria-label="Water and tea, then boil, steep, pour, resulting in a cup of tea" class="tea-flow">
+       <span>
+        Water + tea
+        <small>
+         INPUT
+        </small>
+       </span>
+       <b aria-hidden="true">
+        →
+       </b>
+       <span>
+        Boil → steep 3 min → pour
+        <small>
+         STEPS
+        </small>
+       </span>
+       <b aria-hidden="true">
+        →
+       </b>
+       <span>
+        A cup of tea
+        <small>
+         OUTPUT
+        </small>
+       </span>
+      </div>
+     </div>
+     <p class="definition">
+      An algorithm is a
+      <strong>
+       finite list of unambiguous steps
+      </strong>
+      that turns an
+      <strong>
+       input
+      </strong>
+      into an
+      <strong>
+       output
+      </strong>
+      . “Finite” means it ends. “Unambiguous” means each step has one clear meaning.
+     </p>
+     <div class="lab first-lab">
+      <div class="lab-heading">
+       <div>
+        <span class="eyebrow">
+         EXPERIMENT 01
+        </span>
+        <h2>
+         Find the largest number.
+        </h2>
+       </div>
+       <span class="micro experiment-note">
+        YOU CONTROL THE PACE
+       </span>
+      </div>
+      <p>
+       Read one number at a time. Remember the largest you’ve seen.
+      </p>
+      <div class="first-grid">
+       <div>
+        <div class="micro">
+         INPUT / FIVE NUMBERS
+        </div>
+        <div class="numbers" id="largest-numbers">
+        </div>
+        <div class="memory">
+         <span>
+          LARGEST SO FAR
+         </span>
+         <strong id="largest-value">
+          —
+         </strong>
+        </div>
+       </div>
+       <ol class="pseudo" id="largest-steps">
+        <li>
+         Start with no largest number.
+        </li>
+        <li>
+         Look at the next number.
+        </li>
+        <li>
+         If it is bigger, remember it.
+        </li>
+        <li>
+         When none remain, output the largest.
+        </li>
+       </ol>
+      </div>
+      <div class="toolbar">
+       <button class="primary" id="largest-step">
+        Step forward
+        <span aria-hidden="true">
+         →
+        </span>
+       </button>
+       <button id="largest-reset">
+        Reset
+       </button>
+       <span aria-live="polite" class="status" id="largest-status">
+        Take the first step.
+       </span>
+      </div>
+     </div>
+     <div class="takeaway">
+      <span aria-hidden="true">
+       ↳
+      </span>
+      <p>
+       Each step is small. Together, they solve the problem.
+       <br/>
+       A computer follows the same kind of instructions, very quickly.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="title-1" class="chapter" hidden="" id="chapter-1">
+     <p class="eyebrow">
+      02 / THE INGREDIENTS OF LOGIC
+     </p>
+     <h1 id="title-1">
+      Four building blocks.
+      <br/>
+      Endless possibilities.
+     </h1>
+     <p class="intro">
+      Order the work. Choose a path. Repeat. Remember.
+      <br/>
+      These four ideas are enough to build surprisingly complex things.
+     </p>
+     <div class="block-grid" id="blocks">
+     </div>
+     <div class="takeaway">
+      <span aria-hidden="true">
+       ↳
+      </span>
+      <p>
+       A variable is a named place to remember a value. “Count = 2” means the memory named count holds 2. It can change as the algorithm runs.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="title-2" class="chapter" hidden="" id="chapter-2">
+     <p class="eyebrow">
+      03 / THE ALGORITHM LAB
+     </p>
+     <h1 id="title-2">
+      Watch the thinking.
+     </h1>
+     <p class="intro">
+      Slow it down. See what gets compared, what moves,
+      <br class="desktop-break"/>
+      and what the algorithm keeps in memory.
+     </p>
+     <div aria-label="Choose sorting or searching" class="tabs" role="group">
+      <button aria-pressed="true" id="sort-tab">
+       Sorting
+      </button>
+      <button aria-pressed="false" id="search-tab">
+       Searching
+      </button>
+     </div>
+     <div class="lab">
+      <div class="control-grid">
+       <label>
+        Algorithm
+        <select id="algorithm">
+        </select>
+       </label>
+       <label>
+        Data size
+        <output for="data-size" id="size-value">
+         12
+        </output>
+        <input id="data-size" max="32" min="5" type="range" value="12"/>
+       </label>
+       <label>
+        Speed
+        <output for="speed" id="speed-value">
+         5
+        </output>
+        <input id="speed" max="10" min="1" type="range" value="5"/>
+       </label>
+       <label hidden="" id="target-label">
+        Number to find
+        <input id="target" type="number" value="42"/>
+       </label>
+      </div>
+      <p class="description" id="algorithm-description">
+      </p>
+      <div class="legend">
+       <span>
+        <i class="legend-compare">
+        </i>
+        Comparing
+       </span>
+       <span>
+        <i class="legend-move">
+        </i>
+        Moving / writing
+       </span>
+       <span>
+        <i class="legend-done">
+        </i>
+        Finished / found
+       </span>
+      </div>
+      <div class="viz-grid">
+       <div>
+        <div aria-label="Algorithm data" class="bars" id="bars" role="img">
+        </div>
+        <div class="buffer-note" id="viz-memory">
+        </div>
+       </div>
+       <div class="code-panel">
+        <span class="micro">
+         THE INSTRUCTIONS / PSEUDOCODE
+        </span>
+        <ol class="pseudo" id="viz-code">
+        </ol>
+       </div>
+      </div>
+      <div class="stats">
+       <span>
+        Comparisons
+        <strong id="comparisons">
+         0
+        </strong>
+       </span>
+       <span>
+        Swaps
+        <strong id="swaps">
+         0
+        </strong>
+       </span>
+       <span>
+        Writes
+        <strong id="writes">
+         0
+        </strong>
+       </span>
+      </div>
+      <div class="toolbar">
+       <button class="primary" id="play">
+        Play
+       </button>
+       <button id="viz-step">
+        Step →
+       </button>
+       <button id="viz-reset">
+        Reset
+       </button>
+       <button id="random">
+        New random data
+       </button>
+       <span class="micro" id="frame-count">
+       </span>
+      </div>
+      <p class="live-note" id="viz-status" role="status">
+       Ready.
+      </p>
+      <p class="fine-print">
+       A comparison asks how two values relate. A swap exchanges two values; a write puts one value in a position. Insertion and merge sort use writes rather than swaps.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="title-3" class="chapter" hidden="" id="chapter-3">
+     <p class="eyebrow">
+      04 / LESS WORK, SAME ANSWER
+     </p>
+     <h1 id="title-3">
+      How much work
+      <br/>
+      is enough?
+     </h1>
+     <p class="intro">
+      First, the answer must be right and the steps must finish.
+      <br class="desktop-break"/>
+      Then ask: what happens when the problem gets bigger?
+     </p>
+     <div class="lab">
+      <div class="lab-heading">
+       <h2>
+        The same input. Different effort.
+       </h2>
+       <button id="chart-refresh">
+        Try another data set
+       </button>
+      </div>
+      <p>
+       At each size, all three sorts get exactly the same list. This chart counts comparisons of values, not elapsed time.
+      </p>
+      <svg aria-label="Measured comparisons for bubble, insertion, and merge sort as input size grows" id="efficiency-chart" role="img" viewBox="0 0 720 330">
+      </svg>
+      <div id="chart-values">
+      </div>
+     </div>
+     <h2>
+      Big-O: a language for growth.
+     </h2>
+     <p>
+      Big-O tells us how the work grows as the input grows. Read “O(n)” as “work that grows in proportion to the number of items.” Here, n simply means the number of items.
+     </p>
+     <div class="block-grid" id="growth-cards">
+     </div>
+     <div class="takeaway">
+      <span aria-hidden="true">
+       ↳
+      </span>
+      <p>
+       These are growth patterns, not exact stopwatch predictions. The counts above describe particular inputs; the patterns below describe worst-case growth. Memory, clarity, and the kind of input matter too. Binary search is fast, but sorting an unsorted list first also costs work.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="title-4" class="chapter" hidden="" id="chapter-4">
+     <p class="eyebrow">
+      05 / YOUR TURN TO THINK
+     </p>
+     <h1 id="title-4">
+      Make a little logic.
+     </h1>
+     <p class="intro">
+      You give the instructions. The machine follows them.
+      <br class="desktop-break"/>
+      Can you turn a list of numbers into the answer?
+     </p>
+     <label class="challenge-select">
+      Choose a challenge
+      <select id="challenge">
+       <option value="0">
+        01 · Find the smallest number
+       </option>
+       <option value="1">
+        02 · Count numbers above 10
+       </option>
+       <option value="2">
+        03 · Sort the list
+       </option>
+      </select>
+     </label>
+     <p id="challenge-description">
+     </p>
+     <div class="builder-grid">
+      <div class="toolbox-panel">
+       <h2>
+        The toolbox
+       </h2>
+       <p class="fine-print">
+        Click to add a block. Drag to reorder, or use its ↑ ↓ buttons. Matching “end” blocks close a loop or decision.
+       </p>
+       <div id="toolbox">
+       </div>
+       <details>
+        <summary>
+         A starter hint
+        </summary>
+        <p id="builder-hint">
+        </p>
+       </details>
+       <details id="model-details">
+        <summary>
+         See a model solution
+        </summary>
+        <pre id="model-preview"></pre>
+        <button id="load-model">
+         Use this solution
+        </button>
+       </details>
+      </div>
+      <div class="program-panel">
+       <div class="lab-heading">
+        <h2>
+         Your algorithm
+        </h2>
+        <button id="clear-builder">
+         Clear
+        </button>
+       </div>
+       <ol aria-label="Your algorithm blocks" class="program" id="program">
+       </ol>
+       <div class="toolbar">
+        <button class="primary" id="builder-run">
+         Run
+        </button>
+        <button id="builder-step">
+         Step →
+        </button>
+        <button id="builder-reset">
+         Reset run
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="lab builder-stage">
+      <span class="micro">
+       THE TEST BENCH / POSITIONS START AT 0
+      </span>
+      <div class="numbers" id="builder-data">
+      </div>
+      <div class="memory" id="builder-memory">
+      </div>
+      <p class="live-note" id="builder-status" role="status">
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="title-5" class="chapter" hidden="" id="chapter-5">
+     <p class="eyebrow">
+      06 / TAKE THE IDEAS WITH YOU
+     </p>
+     <h1 id="title-5">
+      A new way
+      <br/>
+      to see the everyday.
+     </h1>
+     <p class="intro">
+      Define the input. Make the steps clear. Track what changes.
+      <br class="desktop-break"/>
+      Check the output. Ask how the work grows.
+     </p>
+     <div class="recap-strip">
+      <div>
+       <span class="micro">
+        WHAT IT IS
+       </span>
+       <p>
+        A finite, precise path from input to output.
+       </p>
+      </div>
+      <div>
+       <span class="micro">
+        HOW IT WORKS
+       </span>
+       <p>
+        Sequence, decisions, repetition, and memory.
+       </p>
+      </div>
+      <div>
+       <span class="micro">
+        WHAT MAKES IT GOOD
+       </span>
+       <p>
+        A correct answer, a finish, and sensible use of time and memory.
+       </p>
+      </div>
+     </div>
+     <h2>
+      A quick self-check.
+     </h2>
+     <p>
+      Five questions. Choose an answer to see the reasoning.
+     </p>
+     <div id="quiz">
+     </div>
+     <p id="quiz-score" role="status">
+     </p>
+     <h2>
+      They’re already part of your life.
+     </h2>
+     <div class="life-grid" id="life-examples">
+     </div>
+    </section>
+    <footer>
+     <button id="back">
+      ← Back
+     </button>
+     <span id="footer-note">
+     </span>
+     <button class="primary" id="next">
+      Building blocks →
+     </button>
+    </footer>
+   </main>
+  </div>
+  <noscript>
+   <p class="noscript">
+    Enable JavaScript to use the experiments and chapter navigation.
+   </p>
+  </noscript>
+  <script src="algorithms.js">
+  </script>
+  <script src="intro.js">
+  </script>
+  <script src="visualizer.js">
+  </script>
+  <script src="builder.js">
+  </script>
+  <script src="app.js">
+  </script>
+ </body>
+</html>
